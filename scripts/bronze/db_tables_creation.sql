@@ -12,7 +12,7 @@ Execution:
 ==============================================================================
 */
 
-
+CREATE DATABASE datawarehouse;
 
 
 use datawarehouse;
