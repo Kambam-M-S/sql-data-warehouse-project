@@ -36,4 +36,10 @@ where maintenance != trim(maintenance) or maintenance is null;
 
 -- All the 3 columns are free from missing values and unwanted space 
 
+-- Data Standardization and Consistency
+select distinct cat from slr_erp_px_cat;
+select distinct subcat from slr_erp_px_cat;
+select distinct maintenance from slr_erp_px_cat;
+-- Data is stable without inconsistency 
+
 # No Changes done in the table erp_px_cat. Direct upload of erp_px_cat table from bronze layer to silver layer can be done
