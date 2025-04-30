@@ -7,12 +7,13 @@ A **robust data engineering project** designed to build a scalable data warehous
 - **Batch Processing**: Handles large-scale transaction datasets with MySQL stored procedures.
 - **Query Optimization**: Achieves a 25% reduction in query execution time using efficient stored procedures.
 - **Automation**: Automates data ingestion workflows using Python scripts, reducing processing time by 30%.
-- **Documentation**: Leverages Notion for detailed project documentation and data flow charts, enhancing collaboration by 20%.
+- **Documentation**: Leverages Notion and draw.io for detailed project documentation and data flow charts, enhancing collaboration by 20%.
 
 ## Tech Stack
 - **Python**: Scripts for data ingestion and automation.
 - **MySQL**: Data warehouse storage and stored procedures.
-- **Notion**: Platform for data flow charts and project documentation.
+- **Notion**: Platform for project documentation.
+- **draw.io**: Platform for data flow charts.
 
 ---
 
@@ -49,11 +50,13 @@ cd sql-data-warehouse-project
    - Access your MySQL server and create the database.
 2. **Set up tables**:
    ```bash
-   mysql -u username -p database_name < sql/setup.sql
+   mysql -u username -p database_name < scripts/bronze/db_tables_creation.sql
    ```
-3. **Execute stored procedures**:
+3. **Load Data into Tables**:
+   - There are 2 Methods based on data quality use either of them
+4. **Execute stored procedures**:
    ```bash
-   mysql -u username -p database_name < sql/procedures.sql
+   mysql -u username -p database_name < scripts/silver/stored_procedure.sql
    ```
 
 ### Run the Pipeline
